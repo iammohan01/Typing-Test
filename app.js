@@ -1,15 +1,19 @@
+var startTimer = null;
+// var isTimerStarted ;
 function startGame(th){
-    th.style.filter = "blur(0px)"
-    var startTimer = setInterval(timer,1000)
+    th.style.filter = "blur(0px)";
+    if (startTimer == null){
+        startTimer = setInterval(timer,1000);
+    }
 }
 
-var remain = 60 ;
-var timerBox = _(".timer > span:first-child")
+var remain = 61 ;
+var timerBox = _(".timer > span:first-child");
 function timer(){
-    timerBox.innerText = remain-- ;
+    timerBox.innerText = --remain ;
     if (remain <= 0){
-        clearInterval(myInterval);
-        gameOver();   
+        clearInterval(startTimer); 
+        startTimer = null;
     }
 }
 //i don't know exact name . i heard it was hoisting.!
