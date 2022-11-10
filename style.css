@@ -21,7 +21,7 @@ body{
 .typiingArea{
     height: 100%;
     width: 80%;
-    /* background-color: rgb(162, 77, 247); */
+    background-color: rgb(162, 77, 247);
 }
 #heading{
     font-family:  var(--bold-font);
@@ -51,14 +51,14 @@ body{
     font-family: var(--bold-font);
     flex-direction: column;
     /* width: 25%; */
-    /* background-color: bisque; */
+    background-color: bisque;
     border-radius: 50%;
 }
 .value{
     font-size: 45px;
 }
 .textArea{
-    /* background-color: aquamarine; */
+    background-color: aquamarine;
     margin: 5%;
     height: 50%;
 }
@@ -73,6 +73,7 @@ body{
     line-height: 55px;
     letter-spacing: 3px;
     filter: blur(5px);
+    user-select: none;
     /* gap: 0; */
     /* white-space: nowrap; */
     
@@ -87,7 +88,7 @@ body{
 .rocketArea{
     height: 100%;
     width: 20%;
-    /* background-color: aqua; */
+    background-color: aqua;
     position: relative;
     overflow: hidden;
 }
@@ -95,7 +96,9 @@ body{
     /* border: 1px solid red; */
     visibility: hidden;
     width: 100%;
+    /* height: 100%; */
     position: absolute;
-    bottom: -10px;
+    bottom: 0px;
     transform: rotate(50deg);
+    transition: 1s bottom;
 }
