@@ -21,7 +21,7 @@ body{
 .typiingArea{
     height: 100%;
     width: 80%;
-    background-color: rgb(162, 77, 247);
+    /* background-color: rgb(162, 77, 247); */
 }
 #heading{
     font-family:  var(--bold-font);
@@ -41,7 +41,7 @@ body{
     justify-content: space-evenly;
 }
 .timer,.Wpm ,.accuracy,.Cpm{
-    /* border: 1px solid red; */
+    border: 1px solid red;
     height: 100%;
     /* width: height; */
     aspect-ratio: 1/1;
@@ -51,14 +51,14 @@ body{
     font-family: var(--bold-font);
     flex-direction: column;
     /* width: 25%; */
-    background-color: bisque;
+    /* background-color: bisque; */
     border-radius: 50%;
 }
 .value{
     font-size: 45px;
 }
 .textArea{
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     margin: 5%;
     height: 50%;
 }
@@ -87,5 +87,15 @@ body{
 .rocketArea{
     height: 100%;
     width: 20%;
-    background-color: aqua;
+    /* background-color: aqua; */
+    position: relative;
+    overflow: hidden;
+}
+#rocket-animated{
+    /* border: 1px solid red; */
+    visibility: hidden;
+    width: 100%;
+    position: absolute;
+    bottom: -10px;
+    transform: rotate(50deg);
 }
