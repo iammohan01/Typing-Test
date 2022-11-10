@@ -1,17 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+@import url("https://use.typekit.net/rls3ibm.css");
 :root{
     --bold-font : 'Quicksand', sans-serif;
+    --bold-head : 'bely-display', sans-serif;
+    --background-primary : #AFB4FF;
+    --background-secondary : #9C9EFE;
+    --font-primary : #3B3486;
+    --font-secondary : #393E46 ;
+
 }
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* border: 1px solid red; */
     font-family: var(--bold-font);
-    /* border-radius: 22px; */
+    /* background-color: var(--background-primary); */
 }
 body{
     height: 100vh;
+    background-color: var(--background-primary);
 }
 .main-area{
     height: 100%;
@@ -21,10 +28,13 @@ body{
 .typiingArea{
     height: 100%;
     width: 80%;
-    background-color: rgb(162, 77, 247);
+    /* background-color: rgb(162, 77, 247); */
 }
 #heading{
-    font-family:  var(--bold-font);
+    /* font-family:  var(--bold-font); */
+    font-family:  var(--bold-head);
+     /* 'bd-supper', sans-serif; */
+    color: var(--font-secondary);
     /* border: 1px solid red; */
     height: 10%;
     width: 80%;
@@ -41,32 +51,47 @@ body{
     justify-content: space-evenly;
 }
 .timer,.Wpm ,.accuracy,.Cpm{
-    border: 1px solid red;
     height: 100%;
-    /* width: height; */
     aspect-ratio: 1/1;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: var(--bold-font);
     flex-direction: column;
-    /* width: 25%; */
-    background-color: bisque;
+    background-color: var(--background-secondary);
     border-radius: 50%;
 }
 .value{
     font-size: 45px;
 }
 .textArea{
-    background-color: aquamarine;
+    background-color: var(--background-secondary);
     margin: 5%;
     height: 50%;
+    position: relative;
+    /* border: 1px solid red; */
+    border-radius: 22px;
+
+}
+.keyWords{
+    background-color: var(--background-secondary);
+    
+}
+span{
+    background-color: transparent;
 }
 .gameStartHint{
     text-align: center;
-    padding:  15px;
+    padding-top:  20px;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    /* border: 1px solid red; */
 }
 .keyWords{
+    /* border: 1px solid red; */
     font-size: 30px;
     margin: 20px;
     padding: 20px;
@@ -79,16 +104,29 @@ body{
     
 }
 #correctWords{
-    color: green;
+    color: rgba(0, 0, 0, 0.2);
 }
-
+.restart{
+    /* display: none; */
+    visibility: hidden;
+    font-size: 25px;
+    background-color: rgb(0, 0, 0,0.5);
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    top: calc(50% - 50px);
+    right: calc(50% - 150px);
+}
 
 
 
 .rocketArea{
     height: 100%;
     width: 20%;
-    background-color: aqua;
+    /* background-color: aqua; */
     position: relative;
     overflow: hidden;
 }
@@ -96,6 +134,7 @@ body{
     /* border: 1px solid red; */
     visibility: hidden;
     width: 100%;
+    z-index: 10;
     /* height: 100%; */
     position: absolute;
     bottom: 0px;
